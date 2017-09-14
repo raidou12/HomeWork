@@ -7,11 +7,6 @@ public class Interface {
 	private int catchValueBinary1;
 	private int catchValueBinary2;
 	
-	public Interface(){
-		int catchValueBinary1 = 0 ;
-		int catchValueBinary2 = 0;
-	}
-	
 	//Methods
 	public void ask_binary_code(){
 		System.out.print("Número Binario 1 >> ");
