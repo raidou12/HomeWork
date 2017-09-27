@@ -1,11 +1,9 @@
 package Binario;
 import java.util.Scanner;
 
-public class teste
+public class ConvertToBinary
 {
 	
-	public static void main(String[] args)
-	{
 		Scanner in = new Scanner(System.in);
 		boolean repeat;
 		int decimal = 0;
@@ -13,9 +11,8 @@ public class teste
 		String answer="";
 		String	reverseanswer="";
 		
-		System.out.println("Digite valor decimal.");	
+		public void TransformInBinary(){
 		decimal = in.nextInt();
-		
 		if(decimal == 0)
 		{
 			reverseanswer = ""+decimal;
@@ -53,5 +50,5 @@ public class teste
 				}
 		}
 		System.out.println("resposta: "+reverseanswer);
-	}
+		}
 }

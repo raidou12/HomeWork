@@ -11,9 +11,9 @@ public class Operations {
 		String num2 = in.nextLine();
 		String answer = "";
 		char rest = '0';
-	}
+		}
 
-	public void subtract() {
+	/*public void subtract() {
 		
 		for (int i = num1.length() - 1; i >= 0; i--) {
 			if (num1.charAt(i) == '0' && num2.charAt(i) == '0') {
@@ -45,7 +45,7 @@ public class Operations {
 		}
 		System.out.println(num1+"\n+ "+num2+"\n"+answer);
 
-	}
+	}*/
 
 	
 	public void subtract(){
@@ -96,6 +96,8 @@ public class Operations {
 			answer = "-"+answer;
 		}
 		System.out.println(num1+"\n- "+num2+"\n"+answer);
-
+		
+			}
+		}
 	}
 }
