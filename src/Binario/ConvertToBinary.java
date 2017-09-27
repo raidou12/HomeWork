@@ -13,6 +13,8 @@ public class ConvertToBinary
 		
 		public void TransformInBinary(){
 		decimal = in.nextInt();
+		
+		
 		if(decimal == 0)
 		{
 			reverseanswer = ""+decimal;
