@@ -32,6 +32,7 @@ public class TestIn {
 			num2 = replace;
 			num1 = replace2;
 			negative = true;
+			System.out.println("Diminuiu");
 		}
 		
 	}
