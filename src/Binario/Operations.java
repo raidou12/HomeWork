@@ -1,4 +1,5 @@
 package Binario;
+
 import java.util.Scanner;
 
 public class Operations {
@@ -10,6 +11,9 @@ public class Operations {
 		String num2 = in.nextLine();
 		String answer = "";
 		char rest = '0';
+	}
+
+	public void subtract() {
 		
 		for (int i = num1.length() - 1; i >= 0; i--) {
 			if (num1.charAt(i) == '0' && num2.charAt(i) == '0') {
@@ -42,6 +46,7 @@ public class Operations {
 		System.out.println(num1+"\n+ "+num2+"\n"+answer);
 
 	}
+
 	
 	public void subtract(){
 		Scanner in = new Scanner(System.in);
@@ -53,8 +58,13 @@ public class Operations {
 		char rest = '0';
 
 		for (int i = num1.length() - 1; i >= 0; i--) {
+
+			if (num1.charAt(i) == '0' && num2.charAt(i) == '0' || num1.charAt(i) == '1' && num2.charAt(i) == '1') {
+				if (num2.charAt(i) == '0') {
+
 			if (num1.charAt(i) == '0' && num2.charAt(i) == '0' || num1.charAt(i) == '1' && num2.charAt(i) == '1' ) {
 				if (num2.charAt(i)== '0') {
+
 					rest = '0';
 					answer = "0" + answer;
 				} else {
@@ -78,6 +88,10 @@ public class Operations {
 			}
 
 		}
+		if (rest == '1') {
+			answer = "-" + answer;
+		}
+		System.out.println(num1 + "\n- " + num2 + "\n" + answer);
 		if (rest == '1'){
 			answer = "-"+answer;
 		}
