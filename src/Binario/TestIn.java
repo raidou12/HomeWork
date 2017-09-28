@@ -1,6 +1,6 @@
 package Binario;
 
-public class TestIn {
+public class TestIn extends BinToDec {
 
 	private String num1 = "";
 	private String num2 = "";
@@ -24,8 +24,12 @@ public class TestIn {
 	}
 
 	public void testNegative() {
-		int number1 = Integer.parseInt(num1, 2);
-		int number2 = Integer.parseInt(num2, 2);
+		setBinario(num1);
+		BinToDec();
+		int number1 = getAnswerToBinary();
+		setBinario(num2);
+		BinToDec();
+		int number2 = getAnswerToBinary();
 		if (number1 < number2) {
 			String replace = num1;
 			String replace2 = num2;
