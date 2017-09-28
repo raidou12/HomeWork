@@ -2,49 +2,39 @@ package Binario;
 
 import java.util.Scanner;
 
-public class Operations extends TestIn {
-	Scanner in = new Scanner(System.in);
-	private char rest = '0';
-
-	public void ask() {
-		System.out.println("Primeiro numero(brinario)");
-		setNum1(in.nextLine());
-		System.out.println("Segundo numero(brinario)");
-		setNum2(in.nextLine());
-		setAnswer("");
-	}
+public class Operations extends Entry {
 
 	public void addition() {
 		ask();
 		testLength();
 		for (int i = getNum1().length() - 1; i >= 0; i--) {
 			if (getNum1().charAt(i) == '0' && getNum2().charAt(i) == '0') {
-				if (rest == '0') {
+				if (getRest() == '0') {
 					setAnswer("0" + getAnswer());
 				} else {
-					rest = '0';
+					setRest('0');
 					setAnswer("1" + getAnswer());
 				}
 			} else if (getNum1().charAt(i) == '1' && getNum2().charAt(i) == '0'
 					|| getNum1().charAt(i) == '0' && getNum2().charAt(i) == '1') {
-				if (rest == '0') {
+				if (getRest() == '0') {
 					setAnswer("1" + getAnswer());
 				} else {
-					rest = '1';
+					setRest('1');
 					setAnswer("0" + getAnswer());
 				}
 			} else if (getNum1().charAt(i) == '1' && getNum2().charAt(i) == '1') {
-				if (rest == '0') {
-					rest = '1';
+				if (getRest() == '0') {
+					setRest('1');
 					setAnswer("0" + getAnswer());
 				} else {
-					rest = '1';
+					setRest('1');
 					setAnswer("1" + getAnswer());
 				}
 			}
 		}
-		if (rest == '1') {
-			setAnswer(rest + getAnswer());
+		if (getRest() == '1') {
+			setAnswer(getRest() + getAnswer());
 		}
 		System.out.println(getNum1() + "\n+ " + getNum2() + "\n" + getAnswer());
 
@@ -59,28 +49,28 @@ public class Operations extends TestIn {
 			testNegative();
 			for (int i = getNum1().length() - 1; i >= 0; i--) {
 				if (getNum1().charAt(i) == '0' && getNum2().charAt(i) == '0') {
-					if (rest == '0') {
+					if (getRest() == '0') {
 						setAnswer("0" + getAnswer());
 					} else {
 						setAnswer("1" + getAnswer());
 					}
 				} else if (getNum1().charAt(i) == '1' && getNum2().charAt(i) == '1') {
-					if (rest == '0') {
+					if (getRest() == '0') {
 						setAnswer("0" + getAnswer());
 					} else {
-						rest = '0';
+						setRest('0');
 						setAnswer("1" + getAnswer());
 					}
 				} else if (getNum1().charAt(i) == '1' && getNum2().charAt(i) == '0') {
-					if (rest == '0') {
+					if (getRest() == '0') {
 						setAnswer("1" + getAnswer());
 					} else {
-						rest = '0';
+						setRest('0');
 						setAnswer("0" + getAnswer());
 					}
 				} else {
-					if (rest == '0') {
-						rest = '1';
+					if (getRest() == '0') {
+						setRest('1');
 						setAnswer("1" + getAnswer());
 					} else {
 						setAnswer("0" + getAnswer());
