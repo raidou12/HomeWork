@@ -1,6 +1,12 @@
 package Binario;
 import java.util.Scanner;
 public class Choice extends Operations{
+
+	public Choice(String num1, String num2, Boolean negative, String answer, char rest) {
+		super(num1, num2, negative, answer, rest);
+		// TODO Auto-generated constructor stub
+	}
+
 	Scanner in = new Scanner(System.in);
 	
 	public void choice() {
